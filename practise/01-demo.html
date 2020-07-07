@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ESM特性</title>
+    </head>
+    <body>
+        <!-- 1.通过给script添加type="module"属性，就可以以ES module的标准执行 -->
+        <script type="module" >
+            console.log(this)
+        </script>
+        <!-- 2.每个ES module单独运行在一个单独私有作用域中 -->
+        <script type="module">
+            var foo =100 
+            console.log(foo)
+        </script>
+        <script type="module">
+            console.log(foo)
+        </script>
+
+         <!-- 4.ES module的script标签会延迟执行脚本--> 
+         <script type="module" src="demo.js"></script>
+
+         <p>显示内容</p>
+    </body>
+</html>

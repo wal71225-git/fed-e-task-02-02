@@ -1,2 +1,5 @@
 import { a } from './module.js'
-console.log('a', a)
+import head from './head.png'
+const img = new Image()
+img.src = head
+document.body.append(img)

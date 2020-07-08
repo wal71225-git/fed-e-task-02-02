@@ -7,15 +7,15 @@
 
 // }
 //统一导出
- var name = 'foo'
- function test() {
-    console.log('导出函数')
-}
- class person {
+//  var name = 'foo'
+//  function test() {
+//     console.log('导出函数')
+// }
+//  class person {
     
-}
-export {
-    name as fooname,
-    test,
-    person
-}
+// }
+// export {
+//     name as fooname,
+//     test,
+//     person
+// }

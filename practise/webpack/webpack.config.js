@@ -11,6 +11,17 @@ module.exports = {
     //其它资源模块加载
     module:{
         rules: [
+            // webpack只是一个打包工具，加载器用来编译转换代码
+            //js文件
+            {
+                test:/.js$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
             // css文件
             {
                 test:/.css$/,
@@ -19,11 +30,20 @@ module.exports = {
                     'css-loader'
                 ]
            },
-           // 图片文件
-           {
-               test: /.png$/,
-               use: 'file-loader'
+        //    // 图片文件
+        //    {
+        //        test: /.png$/,
+        //        use: 'file-loader'
+        //    }
+        {
+           test:  /.png$/,
+           use: {
+             loader:'url-loader',
+             options: {
+                limit: 10 * 1024 // 10KB
+             }
            }
+        }
         ]
     }
 }

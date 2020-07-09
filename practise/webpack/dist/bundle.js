@@ -94,9 +94,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _head_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 
 
-const img = new Image()
-img.src = _head_png__WEBPACK_IMPORTED_MODULE_1__["default"]
-document.body.append(img)
+var img = new Image();
+img.src = _head_png__WEBPACK_IMPORTED_MODULE_1__["default"];
+document.body.append(img);
 
 /***/ }),
 /* 1 */
@@ -106,7 +106,7 @@ document.body.append(img)
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return a; });
 // 
-const a = 10
+var a = 10;
 
 /***/ }),
 /* 2 */

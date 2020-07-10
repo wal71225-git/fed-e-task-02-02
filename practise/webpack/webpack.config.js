@@ -1,5 +1,5 @@
 const path = require('path')
-const { test } = require('../module')
+const { test } = require('../webpack-import-export/module')
 module.exports = {
     mode: "none",//工作模式
     entry: './src/index.js', // 入口
@@ -43,7 +43,17 @@ module.exports = {
                 limit: 10 * 1024 // 10KB
              }
            }
-        }
+        },
+        // html文件
+        {
+            test:  /.html$/,
+            use: {
+              loader:'html-loader',
+              options: {
+                  attrs: ['img:src','a:href'] // 设置需要打包的引用资源
+              }
+            }
+         }
         ]
     }
 }

@@ -8,7 +8,7 @@ module.exports = {
         publicPath:'/dist/' // 指定资源文件引用的目录
     },
     devServer: {
-        contentBase: './public',
+        contentBase: ['./public','./src'],
         proxy: {
             '/api': {
                 // http:loaclhost:8080/api/users =>  https://api.github.com/api/users

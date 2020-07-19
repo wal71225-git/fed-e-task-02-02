@@ -1,11 +1,11 @@
-//引入webpack公共配置文件
+// 引入webpack公共配置文件
 const webpack = require('webpack')
 const common = require('./webpack.common')
 const { merge } = require('webpack-merge')
-module.exports = merge(common,{
-    // mode: 'production',
-    mode: 'none',
-    devServer: {
+module.exports = merge(common, {
+// mode: 'production',
+  mode: 'none',
+  devServer: {
         hot: true,
         contentBase: ['./public','./src'],
         proxy: {

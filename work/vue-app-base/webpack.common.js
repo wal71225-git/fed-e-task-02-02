@@ -8,7 +8,7 @@ module.exports = {
     mode: 'none',
     entry: './src/main.js',
     output: {
-        filename: 'bundle.js',
+        filename: '[name]-[chunkhash:8].bundle.js',
         path: path.join(__dirname, 'dist'),
         // publicPath: 'dist/'
     },
